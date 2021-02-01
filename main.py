@@ -8,9 +8,12 @@ import mysql.connector
 
 
 class Drug:
-    def __init__(self, id, name, conflicts):
+    def __init__(self, id, name, prescription_id, effect, complications, conflicts):
         self.id = id
         self.name = name
+        self.prescription_id = prescription_id
+        self.effect = effect
+        self.complications = complications
         self.conflicts = conflicts
 
 
