@@ -1,23 +1,32 @@
 import mysql.connector
-class drug:
+# mydb = mysql.connector.connect(
+#    host = "localhost",
+#   user = "root",
+#    passwd = ""
+# )
+# cursor = mydb.cursor()
+
+
+class Drug:
     def __init__(self, id, name, conflicts):
         self.id = id
         self.name = name
         self.conflicts = conflicts
 
 
-class patient:
-    def __init__(self, name, family, gender, address, history):
+class Patient:
+    def __init__(self, id, name, family, age, birthday, gender, insurance,\
+                 ins_id, phone, history, province, city, address):
+        self.id = id
         self.name = name
         self.family = family
+        self.age = age
+        self.birthday = birthday
         self.gender = gender
-        self.address = address
+        self.insurance = insurance
+        self.ins_id = ins_id
+        self.phone = phone
         self.history = history
-#mydb = mysql.connector.connect(
-#    host = "localhost",
-#   user = "root",
-#    passwd = ""
-#)
-#cursor = mydb.cursor()
-p1 = patient('ehsan','bakefayat','male', 'iran', 'heart diesase')
-print(p1.name)
+        self.province = province
+        self.city = city
+        self.address = address
